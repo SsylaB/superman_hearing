@@ -49,10 +49,7 @@ void updateClarityParams(float clarity01) {
     clarityGate.setThreshold((int16_t)(250 + (2600 - 250) * clarity01));
 }
 
-void updateFxParams(float fx01) {
-    fxReverb.roomsize(0.15f + 0.40f * fx01);
-    fxReverb.damping(0.30f + 0.55f * fx01);
-}
+
 
 void applyRouting() {
     if (bypassMode) {

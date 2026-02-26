@@ -7,7 +7,7 @@
 bool bypassMode = false;
 int g_mode = 0;
 int g_beamType = 0;
-int s_clarityFilt, s_fxFilt;
+int s_clarityFilt, s_volumeFilt;
 
 // Instantiate Audio Objects (The actual creation)
 AudioInputI2S lineIn;
@@ -94,11 +94,15 @@ void loop() {
 
     // 2. Update Audio
     float clarity = potTo01Smoothed(POT_CLARITY, s_clarityFilt, 16);
-    float fx = potTo01Smoothed(POT_FX, s_fxFilt, 4);
+    
+    // Read the third pot and apply it directly to the hardware volume
+    float volume = potTo01Smoothed(POT_FX, s_fxFilt, 4);
+    sgtl5000.volume(volume);
     
     updateSteeringDelays();
     updateClarityParams(clarity);
-    updateFxParams(fx);
+    
+    
     updateLEDs(bypassMode, analogRead(POT_STEER));
 
     // 3. Telemetry
