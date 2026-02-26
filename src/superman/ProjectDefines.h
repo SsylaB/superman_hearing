@@ -4,9 +4,9 @@
 // PINS
 const int PIN_BYPASS_BTN = 5;
 const int PIN_MODE_BTN   = 2;
-const int POT_STEER      = A1;
-const int POT_CLARITY    = A0;
-const int POT_Volume     = A2;
+const int POT_STEER      = A0;
+const int POT_CLARITY    = A2;
+const int POT_Volume     = A1;
 const int LED_BYPASS     = 13;
 const int PIN_LED2       = 3;
 const int PIN_LED3       = 4;
