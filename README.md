@@ -23,21 +23,20 @@ To isolate human speech from environmental noise, the system focuses on the **Sp
 
 ### 2️⃣ Digital Beamforming
 
-Using two microphones spaced exactly **15 cm** apart, the system detects the microscopic time delay ($\tau$) of incoming sound.
+Using two microphones spaced exactly **15 cm** apart, the system estimates the microscopic time delay **τ** of incoming sound.
 
-- **Constructive Interference:** By digitally delaying one signal to align with the other, the system amplifies sound from the selected steer angle.
+- **Constructive Interference:** By digitally delaying one signal to align with the other, the system amplifies sound from the selected steering direction.
 - **Phase Cancellation:** Sounds coming from other directions are naturally suppressed.
 - **Time Delay Formula:**
 
-\[
+$$
 \tau = \frac{d \cdot \sin(\theta)}{v}
-\]
+$$
 
 Where:
-- $d = 15\text{ cm}$ (microphone spacing)  
-- $\theta$ = steering angle  
-- $v$ = speed of sound  
-
+- $d = 15\ \text{cm}$ (microphone spacing)
+- $\theta$ = steering angle
+- $v$ = speed of sound
 ---
 
 ### 3️⃣ Mixing and FX Module
