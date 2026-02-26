@@ -43,11 +43,9 @@ Where:
 
 The processed signal is routed through the Teensy Audio Library graph, allowing:
 
-- Real-time gain adjustment  
-- Mode switching (Clarity / Clarity + FX / Bypass)  
-- LED-based system feedback  
+- Mode switching (Clarity / Clarity + FX )  
 
-An optional **Reverb effect** can be applied to add spatial depth, with parameters controlled via the FX potentiometer.
+An optional **Reverb effect** can be applied to add spatial depth.
 
 ---
 
@@ -89,7 +87,7 @@ The core logic is modularized into the following files:
 | **Teensy 4.0**           | 1        | Main DSP Microcontroller         |
 | **Teensy Audio Shield**  | 1        | High-quality Audio I/O           |
 | **Microphones**          | 2        | Spaced 15 cm apart               |
-| **Potentiometers**       | 3        | Steering, Clarity, FX            |
+| **Potentiometers**       | 3        | Steering, Clarity, Volume        |
 | **Push Buttons**         | 2        | Mode selection & Bypass          |
 | **LEDs**                 | 3        | System status indicators         |
 
