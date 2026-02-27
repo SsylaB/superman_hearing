@@ -7,8 +7,8 @@ void updateLEDs(bool bypass, int steerVal) {
         digitalWrite(PIN_LED2, LOW);
         digitalWrite(PIN_LED3, LOW);
     } else {
-        if (steerVal < 450) { digitalWrite(PIN_LED3, HIGH); digitalWrite(PIN_LED2, LOW); }
-        else if (steerVal > 570) { digitalWrite(PIN_LED3, LOW); digitalWrite(PIN_LED2, HIGH); }
+        if (steerVal < 450) { digitalWrite(PIN_LED2, HIGH); digitalWrite(PIN_LED3, LOW); }
+        else if (steerVal > 570) { digitalWrite(PIN_LED2, LOW); digitalWrite(PIN_LED3, HIGH); }
         else { digitalWrite(PIN_LED2, HIGH); digitalWrite(PIN_LED3, HIGH); }
     }
 }

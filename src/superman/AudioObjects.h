@@ -79,3 +79,5 @@ extern AudioMixer4              outSelect;
 extern AudioControlSGTL5000     sgtl5000;
 extern AudioAnalyzePeak         peakL;
 extern AudioAnalyzePeak         peakR;
+extern AudioMixer4              fxInputMixer; 
+extern AudioOutputI2S           i2s_out;
