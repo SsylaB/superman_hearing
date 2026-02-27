@@ -24,7 +24,7 @@ AudioAnalyzePeak peakL, peakR;
 // AUDIO CONNECTIONS (The Patch Bay)
 // ======================================================
 
-// 1. Input to Delays (Pre-processing filters removed for simplicity as per your original logic)
+// 1. Input to Delays 
 AudioConnection patchCord1(lineIn, 0, delayL, 0);
 AudioConnection patchCord2(lineIn, 1, delayR, 0);
 
@@ -33,7 +33,6 @@ AudioConnection patchCord5(lineIn, 0, peakL, 0);
 AudioConnection patchCord6(lineIn, 1, peakR, 0);
 
 // 3. Delay Taps to Fractional Mixers
-// Each delay line provides tap 0 (N) and tap 1 (N+1)
 AudioConnection patchCord7(delayL, 0, fracMixL, 0);
 AudioConnection patchCord8(delayL, 1, fracMixL, 1);
 AudioConnection patchCord9(delayR, 0, fracMixR, 0);
@@ -54,7 +53,7 @@ AudioConnection patchCord16(clarityLP, 0, clarityGate, 0);
 // 6. FX Input Selection
 // Mode 0/1 uses the clarityGate output
 AudioConnection patchCord17(clarityGate, 0, fxInputMixer, 0);
-// (Optional ch1 for raw input if you decide to expand later)
+// (Optional ch1 for raw input)
 AudioConnection patchCord18(lineIn, 0, fxInputMixer, 1);
 
 // 7. FX Chain
